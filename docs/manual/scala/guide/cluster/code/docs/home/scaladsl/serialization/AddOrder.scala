@@ -17,7 +17,7 @@ object AddOrder {
 
   object AddOrder {
     implicit val format: Format[AddOrder] = (
-      (JsPath \ "product_id").format[String] and
+      (JsPath \ "productId").format[String] and
         (JsPath \ "quantity").format[Int]
       ) (AddOrder.apply, unlift(AddOrder.unapply))
   }
